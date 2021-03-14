@@ -105,14 +105,11 @@ stages:
               azureSubscription: 'Resource Manager - Tailspin - Space Game'
               appName: 'tailspin-space-game-web-rb46'
               resourceGroupName: 'tailspin-space-game-rg'
-            azureSubscription: 'Resource Manager - Tailspin - Space Game'
-            appName: $(WebAppName)
-            resourceGroupName: $(ResourceGroupName)
-            appSettings: |
-              [
-                {
-                  "name": "AppSettings:LeaderboardFunctionUrl",
-                  "value": "http://$(LeaderboardAppName).azurewebsites.net/api/LeaderboardFunction",
-                  "slotSetting": false
-                }
-              ]
+              appSettings: |
+                [
+                  {
+                    "name": "AppSettings:LeaderboardFunctionUrl",
+                    "value": "http://$(LeaderboardAppName).azurewebsites.net/api/LeaderboardFunction",
+                    "slotSetting": false
+                  }
+                ]
